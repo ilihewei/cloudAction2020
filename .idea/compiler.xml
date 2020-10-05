@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-alibaba-provider-payment9002" />
         <module name="cloud-eureka-server-7001" />
         <module name="clod-config-bus-client-9002" />
         <module name="cloud-eureka-client-user-7002" />
-        <module name="cloud-alibaba-provider-payment9001" />
         <module name="cloud-eureka-consumer-order80" />
         <module name="nacos-discovery-config-server-7001" />
-        <module name="cloud-gateway-7004" />
         <module name="cloud-eureka-client-user-7003" />
-        <module name="cloud-config-client" />
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-config-server-7008" />
+        <module name="cloud-alibaba-provider-payment9002" />
+        <module name="cloud-alibaba-provider-payment9001" />
+        <module name="cloud-gateway-7004" />
+        <module name="cloud-config-client" />
+        <module name="cloud-alibaba-consumer-order8001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="clod-config-bus-client-9002" options="-parameters" />
+      <module name="cloud-alibaba-consumer-order8001" options="-parameters" />
       <module name="cloud-alibaba-provider-payment9001" options="-parameters" />
       <module name="cloud-alibaba-provider-payment9002" options="-parameters" />
       <module name="cloud-config-client" options="-parameters" />
