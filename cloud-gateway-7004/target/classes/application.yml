@@ -1,0 +1,31 @@
+server:
+  port: 7005
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
+
+
+
+zuul:
+  routes:
+    spring-person: #服务工程名字
+      path: /** #配置url请求规则
+      serviceId: CLOUD-ORDER-SERVICE #服务名称
+    spring-user:
+      path: /**
+      erviceId: CLOUD-ORDER-SERVICE
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-eureka-server-7001" />
+        <module name="clod-config-bus-client-9002" />
+        <module name="cloud-eureka-client-user-7002" />
+        <module name="cloud-eureka-consumer-order80" />
+        <module name="cloud-gateway-7004" />
+        <module name="cloud-eureka-client-user-7003" />
+        <module name="cloud-config-client" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
+        <module name="cloud-config-server-7008" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-zipkin-server-9411" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clod-config-bus-client-9002" options="-parameters" />
+      <module name="cloud-config-client" options="-parameters" />
+      <module name="cloud-config-server-7008" options="-parameters" />
+      <module name="cloud-eureka-client-user-7002" options="-parameters" />
+      <module name="cloud-eureka-client-user-7003" options="-parameters" />
+      <module name="cloud-eureka-consumer-order80" options="-parameters" />
+      <module name="cloud-eureka-server-7001" options="-parameters" />
+      <module name="cloud-gateway-7004" options="-parameters" />
+      <module name="cloud-stream-rabbitmq-provider8801" options="-parameters" />
+      <module name="cloud-zipkin-server-9411" options="-parameters" />
+    </option>
+  </component>
+</project>
