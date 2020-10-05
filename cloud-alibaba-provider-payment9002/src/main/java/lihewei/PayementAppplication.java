@@ -7,6 +7,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author lihewei
+ *
+ * nacos 本身自带负载均衡，整合netfix的ribbon代码
  */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableDiscoveryClient
