@@ -17,8 +17,11 @@
         <module>cloud-config-server-7008</module>
         <module>clod-config-bus-client-9002</module>
         <module>cloud-stream-rabbitmq-provider8801</module>
-        <module>cloud-zipkin-server-9411</module>
         <module>cloud-eureka-consumer-order80</module>
+
+        <module>cloud-alibaba-provider-payment9001</module>
+        <module>nacos-discovery-config-server-7001</module>
+        <module>cloud-alibaba-provider-payment9002</module>
     </modules>
 
     <properties>
@@ -46,6 +49,14 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
