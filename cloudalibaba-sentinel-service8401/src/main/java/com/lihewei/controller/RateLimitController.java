@@ -6,7 +6,12 @@ import com.lihewei.entity.CommonResult;
 import com.lihewei.entity.Payment;
 import com.lihewei.myhandler.CustomerBlockHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -17,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class RateLimitController {
+
 
 
     @GetMapping("/byResource")
@@ -54,5 +60,30 @@ public class RateLimitController {
     blockHandler = "handlerException2")
     public  CommonResult customerBlockHandler(){
         return  new CommonResult (200,"按客户自定义",new Payment (2020L,"serial003"));
+    }
+
+
+    @RequestMapping("/consumer/fallback/{id}")
+
+    @SentinelResource(value = "fallback",fallback = "handlerFallBack")//blockhandler只负责sentinel控制台配置违规
+    public CommonResult<Payment> fallback(@PathVariable Integer id) {
+
+          Map<Integer,String> map=new HashMap<> ();
+            map.put (1,"1qq");
+            map.put (2,"2aa");
+            map.put (3,"3cc");
+
+        String s = map.get (id);
+        if (id == 4) {
+            throw new IllegalArgumentException ("IllegaArgumentException ,非法参数异常。。。。");
+        } else if (s.equals ("")) {
+            throw new NullPointerException ("控制针异常");
+        }
+        return new CommonResult<> (200, s);
+    }
+
+    public  CommonResult handlerFallBack(@PathVariable Integer id,Throwable e){
+        Payment payment=new Payment (id.longValue (),null);
+        return new CommonResult (444,"兜底异常handlerfallBack内容"+e.getMessage (),payment );
     }
 }
