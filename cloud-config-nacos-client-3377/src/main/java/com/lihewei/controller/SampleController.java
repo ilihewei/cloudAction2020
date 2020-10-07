@@ -1,5 +1,6 @@
 package com.lihewei.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ public class SampleController {
     public  String configInfo;
 
 
+    @SentinelResource("resource")
     @GetMapping(value="/configInfo")
     public  String getConfigInfo(){
         return  configInfo;

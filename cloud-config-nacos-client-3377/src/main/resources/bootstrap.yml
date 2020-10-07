@@ -14,3 +14,9 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yaml
+    sentinel:
+      #sentinel 控制台
+      transport:
+        dashboard: localhost:8080
+        #取消sentinel控制台懒加载
+      eager: true

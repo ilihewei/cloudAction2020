@@ -14,10 +14,12 @@
         <module name="cloud-eureka-client-user-7003" />
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-config-server-7008" />
+        <module name="cloud-config-nacos-client-3377" />
         <module name="cloud-alibaba-provider-payment9002" />
         <module name="cloud-alibaba-provider-payment9001" />
         <module name="cloud-gateway-7004" />
         <module name="cloud-config-client" />
+        <module name="cloudalibaba-sentinel-service8401" />
         <module name="cloud-alibaba-consumer-order8001" />
       </profile>
     </annotationProcessing>
@@ -37,6 +39,7 @@
       <module name="cloud-alibaba-provider-payment9001" options="-parameters" />
       <module name="cloud-alibaba-provider-payment9002" options="-parameters" />
       <module name="cloud-config-client" options="-parameters" />
+      <module name="cloud-config-nacos-client-3377" options="-parameters" />
       <module name="cloud-config-server-7008" options="-parameters" />
       <module name="cloud-eureka-client-user-7002" options="-parameters" />
       <module name="cloud-eureka-client-user-7003" options="-parameters" />
@@ -46,6 +49,7 @@
       <module name="cloud-stream-rabbitmq-provider8801" options="-parameters" />
       <module name="cloud-zipkin-server-9411" options="-parameters" />
       <module name="cloudalibaba-provider-payment9001" options="-parameters" />
+      <module name="cloudalibaba-sentinel-service8401" options="-parameters" />
       <module name="nacos-discovery" options="" />
       <module name="nacos-discovery-config-server-7001" options="-parameters" />
       <module name="nacos-discovery-example-7001" options="-parameters" />
