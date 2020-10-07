@@ -25,6 +25,7 @@
         <module>cloud-alibaba-consumer-order8001</module>
         <module>cloud-config-nacos-client-3377</module>
         <module>cloudalibaba-sentinel-service8401</module>
+        <module>common-api</module>
     </modules>
 
     <properties>
