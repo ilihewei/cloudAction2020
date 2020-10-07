@@ -63,9 +63,21 @@ public class RateLimitController {
     }
 
 
-    @RequestMapping("/consumer/fallback/{id}")
+    /**
+     *     @SentinelResource(value = "fallback",fallback = "handlerFallBack")//blockhandler只负责sentinel控制台配置违规
+     * @param id
+     * @return
+     */
 
-    @SentinelResource(value = "fallback",fallback = "handlerFallBack")//blockhandler只负责sentinel控制台配置违规
+    /**
+     * 若blockexception 和fallback都进行配置，则被限制降级而抛出Blockexception时只会进入bloclhandler处理逻辑
+     * @param id
+     * @return
+     */
+    @RequestMapping("/consumer/fallback/{id}")
+    @SentinelResource(value = "fallback",fallback = "handlerFallBack",
+            blockHandlerClass = CustomerBlockHandler.class,blockHandler = "handlerException2"
+    )//blockhandler只负责sentinel控制台配置违规
     public CommonResult<Payment> fallback(@PathVariable Integer id) {
 
           Map<Integer,String> map=new HashMap<> ();
