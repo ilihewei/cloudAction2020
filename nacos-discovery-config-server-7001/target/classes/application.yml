@@ -1,0 +1,13 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: configserver
+
+
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: localhost:8848
