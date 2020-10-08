@@ -21,6 +21,7 @@
         <module name="cloud-gateway-7004" />
         <module name="cloud-config-client" />
         <module name="cloudalibaba-sentinel-service8401" />
+        <module name="seata-order-servcie2001" />
         <module name="cloud-alibaba-consumer-order8001" />
       </profile>
     </annotationProcessing>
@@ -56,6 +57,7 @@
       <module name="nacos-discovery-config-server-7001" options="-parameters" />
       <module name="nacos-discovery-example-7001" options="-parameters" />
       <module name="nacos-discovery-spring-cloud-config-server-7001" options="-parameters" />
+      <module name="seata-order-servcie2001" options="-parameters" />
       <module name="springcloud-alibaba-examples" options="" />
     </option>
   </component>

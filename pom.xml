@@ -26,6 +26,7 @@
         <module>cloud-config-nacos-client-3377</module>
         <module>cloudalibaba-sentinel-service8401</module>
         <module>common-api</module>
+        <module>seata-order-servcie2001</module>
     </modules>
 
     <properties>
