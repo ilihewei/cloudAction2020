@@ -27,6 +27,9 @@
         <module>cloudalibaba-sentinel-service8401</module>
         <module>common-api</module>
         <module>seata-order-servcie2001</module>
+        <module>redisDemo</module>
+        <module>Transact</module>
+        <module>spring-cloud-native-application</module>
     </modules>
 
     <properties>

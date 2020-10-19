@@ -7,15 +7,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/cloud-zipkin-server-9411/pom.xml" />
-        <option value="$PROJECT_DIR$/cloudalibaba-provider-payment9001/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos-discovery-spring-cloud-config-server-7001/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-alibaba-examples/nacos-discovery-example-7001/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-alibaba-examples/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

@@ -23,4 +23,6 @@ public class OrderController {
     public String getStr(@PathVariable("id") String id){
         return restTemplate.getForObject (serverUrl+"/payment/nacos/"+id,String.class);
     }
+
+
 }

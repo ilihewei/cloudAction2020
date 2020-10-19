@@ -4,3 +4,16 @@ server:
 spring:
   application:
     name: cloud-native
+
+# web管理的端口
+
+#management:
+ # server:
+  #  port: 9091
+
+# 开放所有web管理endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

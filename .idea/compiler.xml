@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-native-application" />
         <module name="cloud-eureka-server-7001" />
         <module name="clod-config-bus-client-9002" />
         <module name="cloud-eureka-client-user-7002" />
@@ -23,6 +24,13 @@
         <module name="cloudalibaba-sentinel-service8401" />
         <module name="seata-order-servcie2001" />
         <module name="cloud-alibaba-consumer-order8001" />
+        <module name="redisDemo" />
+      </profile>
+      <profile name="Annotation profile for cloudAction2020" enabled="true">
+        <sourceOutputDir name="../cloud-eureka-client-user-7003/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../cloud-eureka-client-user-7003/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Transact" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,10 +40,12 @@
       <module name="nacos-discovery-example-7001" target="1.8" />
       <module name="nacos-discovery-spring-cloud-config-server-7001" target="1.8" />
       <module name="springcloud-alibaba-examples" target="1.8" />
+      <module name="tx" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Transact" options="-parameters" />
       <module name="clod-config-bus-client-9002" options="-parameters" />
       <module name="cloud-alibaba-consumer-order8001" options="-parameters" />
       <module name="cloud-alibaba-provider-payment9001" options="-parameters" />
@@ -57,7 +67,9 @@
       <module name="nacos-discovery-config-server-7001" options="-parameters" />
       <module name="nacos-discovery-example-7001" options="-parameters" />
       <module name="nacos-discovery-spring-cloud-config-server-7001" options="-parameters" />
+      <module name="redisDemo" options="-parameters" />
       <module name="seata-order-servcie2001" options="-parameters" />
+      <module name="spring-cloud-native-application" options="-parameters" />
       <module name="springcloud-alibaba-examples" options="" />
     </option>
   </component>
