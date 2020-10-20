@@ -1,4 +1,4 @@
-package com.lihewei.bean;
+package com.lihewei.spring.ioc.bean;
 
 /**
  * @author  lihewei

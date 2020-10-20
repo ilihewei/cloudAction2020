@@ -1,17 +1,22 @@
-package com.lihewei;
+package com.lihewei.spring.ioc;
 
-import com.lihewei.bean.User;
-import com.lihewei.controller.UserController;
-import com.lihewei.ioc.IocContext;
+
+import com.lihewei.spring.ioc.bean.User;
+import com.lihewei.spring.ioc.controller.UserController;
+import com.lihewei.spring.ioc.util.IocContext;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
-//        Object o = IocContext.applicationContext.get (UserController.class);
-//        UserController userController= (UserController) o;
-//        userController.getUser ();
+       Object o = IocContext.applicationContext.get (UserController.class);
+        UserController userController= (UserController) o;
+        userController.getUser (1);
+
+    }
+
+    public void test() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         String classPath="com.lihewei.bean.User";
         Class<?> aClass = Class.forName (classPath);
         Constructor<?> constructor = aClass.getConstructor (String.class, Integer.class);

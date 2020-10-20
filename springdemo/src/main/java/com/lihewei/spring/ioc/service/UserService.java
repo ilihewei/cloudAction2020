@@ -1,7 +1,8 @@
-package com.lihewei.service;
+package com.lihewei.spring.ioc.service;
 
-import com.lihewei.bean.User;
-import com.lihewei.config.Component;
+
+import com.lihewei.spring.ioc.bean.User;
+import com.lihewei.spring.ioc.config.Component;
 
 @Component
 public class UserService {

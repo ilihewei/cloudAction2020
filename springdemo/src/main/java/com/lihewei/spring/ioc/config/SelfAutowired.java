@@ -1,4 +1,4 @@
-package com.lihewei.config;
+package com.lihewei.spring.ioc.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;

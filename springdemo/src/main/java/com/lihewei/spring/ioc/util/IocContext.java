@@ -1,6 +1,8 @@
-package com.lihewei.ioc;
+package com.lihewei.spring.ioc.util;
 
-import com.lihewei.config.Component;
+
+
+import com.lihewei.spring.ioc.config.Component;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -14,7 +16,7 @@ public class IocContext {
     public  static  final Map<Class<?>,Object> applicationContext=new ConcurrentHashMap<> ();
 
     static {
-        String packageName="com.lihewei";
+        String packageName="com.lihewei.spring.ioc";
         try {
             initBean(packageName);
         }catch (Exception e){

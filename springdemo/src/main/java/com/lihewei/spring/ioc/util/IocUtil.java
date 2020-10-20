@@ -1,13 +1,15 @@
-package com.lihewei.ioc;
+package com.lihewei.spring.ioc.util;
 
-import com.lihewei.config.Inject;
+
+
+import com.lihewei.spring.ioc.config.Inject;
 
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public class IocUtil {
     public static void inject() throws IllegalAccessException {
-        Map<Class<?>,Object> map=IocContext.applicationContext;
+        Map<Class<?>,Object> map= IocContext.applicationContext;
         for (Map.Entry<Class<?>,Object> entry:map.entrySet ()) {
             Class<?> clazz=entry.getKey ();
             Object obj=entry.getValue ();

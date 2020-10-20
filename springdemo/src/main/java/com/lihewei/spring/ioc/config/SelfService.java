@@ -1,14 +1,11 @@
-package com.lihewei.config;
+package com.lihewei.spring.ioc.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- * 指定需要注入的属性
- */
-@Target (ElementType.FIELD)
+@Target (ElementType.TYPE)
 @Retention (RetentionPolicy.RUNTIME)
-public @interface Inject {
+public @interface SelfService {
 }

@@ -30,6 +30,8 @@
         <module>redisDemo</module>
         <module>Transact</module>
         <module>spring-cloud-native-application</module>
+        <module>springDemo</module>
+        <module>springdemo</module>
     </modules>
 
     <properties>

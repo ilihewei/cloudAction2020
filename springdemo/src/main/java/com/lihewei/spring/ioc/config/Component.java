@@ -1,11 +1,14 @@
-package com.lihewei.config;
+package com.lihewei.spring.ioc.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target (ElementType.TYPE)
+/**
+ * 指定需要容器所需要的类
+ */
+@Target ({ElementType.TYPE})
 @Retention (RetentionPolicy.RUNTIME)
-public @interface SelfService {
+public @interface Component {
 }
